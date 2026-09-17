@@ -1,16 +1,12 @@
 import { useState } from 'react'
+import logo from '../assets/logo.png'
 
 const NAV_LINKS = ['Home', 'Technologies', 'Projects', 'About', 'Contact']
 
 function BrandMark() {
   return (
-    <a href="#home" className="flex items-center gap-2 focus-ring rounded-lg">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-gradient text-sm font-bold text-white">
-        DS
-      </span>
-      <span className="text-lg font-extrabold tracking-tight text-ink-950">
-        Dev <span className="text-brand-gradient">Stack</span>
-      </span>
+    <a href="#home" className="focus-ring flex items-center rounded-lg">
+      <img src={logo} alt="Dev Stack" className="h-7 w-auto sm:h-8" />
     </a>
   )
 }

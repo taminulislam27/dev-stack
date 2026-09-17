@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 const LINK_GROUPS = [
   { title: 'Product', links: ['Home', 'Technologies', 'Projects'] },
   { title: 'Company', links: ['About', 'Contact', 'Careers'] },
@@ -12,14 +14,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-gradient text-sm font-bold text-white">
-                DS
-              </span>
-              <span className="text-lg font-extrabold tracking-tight text-ink-950">
-                Dev <span className="text-brand-gradient">Stack</span>
-              </span>
-            </div>
+            <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-gray-500">
               Curated tools, technologies, and resources for developers building modern
               software.
