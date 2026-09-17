@@ -34,8 +34,8 @@ export default function Hero() {
           <img
             src={heroBanner}
             alt="Layered illustration of stacked technology modules"
-            width="526"
-            height="526"
+            width="626"
+            height="626"
             className="w-full max-w-md drop-shadow-[0_25px_50px_rgba(139,92,246,0.25)]"
           />
         </div>
