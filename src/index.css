@@ -17,13 +17,6 @@ body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-/* ---------------------------------------------------------------------- */
-/* Single shared brand gradient (orange -> pink -> violet).               */
-/* Everything gradient-themed in the app (brand wordmark, hero highlight, */
-/* primary buttons) reads from these two classes, which in turn read the */
-/* `brand-gradient` background-image token in tailwind.config.js. To      */
-/* re-theme the whole site, change the three color stops in one place.    */
-/* ---------------------------------------------------------------------- */
 .text-brand-gradient {
   @apply bg-brand-gradient bg-clip-text text-transparent;
 }

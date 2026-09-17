@@ -12,9 +12,6 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [stack, setStack] = useState([])
 
-  // Load the technology catalog from the local JSON file instead of
-  // hardcoding it into the component. Real fetch + loading state, even
-  // though a local file usually resolves in a few milliseconds.
   useEffect(() => {
     let isMounted = true
 
