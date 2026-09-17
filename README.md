@@ -72,24 +72,28 @@ public/
 ## 🎓 React questions
 
 **What is JSX, and why is it used in React?**
+
 JSX is a syntax extension that lets us write HTML-like markup directly inside
 JavaScript. It's used because it makes component UI code easier to read and
 write than nested `React.createElement()` calls — you can see the structure
 of what will render while still using full JavaScript for logic.
 
 **What is the difference between props and state?**
+
 Props are values passed *into* a component from its parent — the component
 receiving them can read but not change them. State is data a component
 manages *itself*, using `useState`, and can update over time. Props flow
 down; state lives locally and triggers a re-render when it changes.
 
 **What does the useState hook do, and where did you use it in this project?**
+
 `useState` lets a function component hold and update local data between
 renders. In this project it's used in `App.jsx` to store the fetched
 `technologies` list, the `loading` flag, and the `stack` array of selected
 technologies, and in `Navbar.jsx` to track whether the mobile menu is open.
 
 **What does the useEffect hook do, and why did you need it to load the JSON data?**
+
 `useEffect` runs a side effect after a component renders — things like data
 fetching, subscriptions, or timers that shouldn't happen during rendering
 itself. We used it in `App.jsx` to call `fetch('/technologies.json')` once
@@ -98,6 +102,7 @@ rather than on every render, and we can flip `loading` to `false` once the
 data arrives.
 
 **Why does every item in a .map() list need a unique key prop?**
+
 React uses the `key` to tell list items apart between renders, so it knows
 which items were added, removed, or reordered instead of re-rendering the
 whole list from scratch. Without a stable, unique key, React can mismatch
@@ -105,12 +110,14 @@ items and cause bugs or lose component state — we use each technology's
 `id` field as the key.
 
 **What is conditional rendering? Show one place you used it (example: the empty stack message).**
+
 Conditional rendering means showing different UI depending on some condition,
 using normal JavaScript (`if`, ternaries, `&&`). We use it in `YourStack.jsx`:
 when `stack.length === 0` it renders the "Your stack is empty" message,
 otherwise it renders the list of stack items and the "Remove All" button.
 
 **How do you pass data from a parent component to a child component, and how does a child send something back to the parent?**
+
 A parent passes data down to a child as props, e.g. `<TechCard tech={tech} />`.
 For a child to send information back up, the parent passes a function down
 as a prop (e.g. `onAdd={handleAdd}`), and the child calls that function with
