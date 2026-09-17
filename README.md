@@ -116,10 +116,3 @@ using normal JavaScript (`if`, ternaries, `&&`). We use it in `YourStack.jsx`:
 when `stack.length === 0` it renders the "Your stack is empty" message,
 otherwise it renders the list of stack items and the "Remove All" button.
 
-**How do you pass data from a parent component to a child component, and how does a child send something back to the parent?**
-
-A parent passes data down to a child as props, e.g. `<TechCard tech={tech} />`.
-For a child to send information back up, the parent passes a function down
-as a prop (e.g. `onAdd={handleAdd}`), and the child calls that function with
-whatever data it wants to send — like `TechCard` calling `onAdd(tech)` when
-its button is clicked, which updates state that lives in `App.jsx`.
